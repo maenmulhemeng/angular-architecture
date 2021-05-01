@@ -1,4 +1,7 @@
-<<<<<<< HEAD
+# angular-architecture
+I This is a sample project of angular that suggest an effective archeticture that works for administration-based systems. In this project I consider the application consists of three main parts: the pages, the service-layers and the visual components. The service layer provides the basic business layer services, connecting to the server and cross cutting services like. The visual component divide the components into visual categories like Forms, Lists .. etc and each visual category is divided into business catergory e.g Form/Add/AddBankForm, Forms/Edit/EditBankForm ... etc. 
+The component layer in this context is considered as sources of events whereas the pages layer is considered as the controllers or the hanlder layer of those events. 
+ 
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
@@ -27,5 +30,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 =======
-# angular-architecture
->>>>>>> e40852a2d331014fc8c106bc76ea9fc8e3e46882
+
+
