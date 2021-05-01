@@ -1,0 +1,11 @@
+<h1>Customers Management</h1>
+
+<button mat-raised-button >
+    <a routerLink="/customer/add" routerLinkActive="active">Add Customer</a>
+</button>
+<h2>Abstract List</h2>
+<app-admin-abstract-list  
+[items]="getCustomers()" 
+[fields]="['firstname','lastname']" 
+[editLink]="'/customer/edit'"
+(deleteItem)="onDelete($event)"></app-admin-abstract-list>

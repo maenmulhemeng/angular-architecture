@@ -1,0 +1,12 @@
+<form [formGroup]="bankForm" (ngSubmit)="emitUpdate()">
+    <label>
+        Title:
+        <input type="text"  formControlName="title" required>
+      </label>
+      <label>
+        Address:
+        <input type="text"  formControlName="address">
+      </label>
+      <button mat-raised-button type="submit" [disabled]="!bankForm.valid">Update</button>
+    </form>
+    

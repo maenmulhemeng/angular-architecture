@@ -1,0 +1,10 @@
+<h1>Edit a bank</h1>
+<app-edit-bank-form [bank]="bank" (UPDATE_BANK)="onUpdate($event)"></app-edit-bank-form>
+<h2>Bank's customers</h2>
+<ul>
+    <li *ngFor="let customer of bank.customers">{{customer.firstname}}</li>
+</ul>
+<button>
+    <a routerLink="/bank/{{id}}/customer" routerLinkActive="active">Add customers</a>
+</button>
+<p>And here you can add any other relevant components and expand your page </p>

@@ -1,0 +1,15 @@
+
+    <h2>{{bank?bank.title:''}}</h2>
+    <label>Available customers</label>
+    <select (change)="emitSelect($event)">
+        <option value={-1}></option>
+        <option *ngFor="let customer of customers;index as i;" value="{{i}}"> 
+            {{customer.firstname}} {{customer.lastname}}
+        </option>
+    </select>
+    <ul>
+        <li *ngFor="let c of getBankCustomers()">{{c.firstname}}</li>
+    </ul>
+      <button (click)="emitUpdate()" >Update</button>
+    
+    

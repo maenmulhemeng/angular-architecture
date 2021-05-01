@@ -1,0 +1,24 @@
+<h1 class="title">{{title}}</h1>
+<nav mat-tab-nav-bar [backgroundColor]="background">
+  <a mat-tab-link *ngFor="let link of links"
+     (click)="activeLink = link.link"
+     [routerLink]="link.link"
+     [active]="activeLink == link.link"> {{link.title}} </a>
+ <!-- <a mat-tab-link disabled>Disabled Link</a>-->
+</nav>
+
+<!--
+  <ul> 
+      <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/bank/admin" routerLinkActive="active">Banks Management</a></li>
+      <li><a routerLink="/bank/index" routerLinkActive="active">Banks</a></li>
+    
+      <li><a routerLink="/customer/admin" routerLinkActive="active">Customers Management</a></li>
+      <li><a routerLink="/customer/index" routerLinkActive="active">Customers</a></li>
+      
+  </ul>
+
+-->
+<router-outlet></router-outlet>
+ 
+ 

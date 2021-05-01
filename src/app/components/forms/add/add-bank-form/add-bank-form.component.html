@@ -1,0 +1,11 @@
+<form [formGroup]="bankForm" (ngSubmit)="emitAdd()">
+<label>
+    Title:
+    <input type="text"  formControlName="title" required>
+  </label>
+  <label>
+    Address:
+    <input type="text"  formControlName="address">
+  </label>
+  <button type="submit" [disabled]="!bankForm.valid">Add</button>
+</form>

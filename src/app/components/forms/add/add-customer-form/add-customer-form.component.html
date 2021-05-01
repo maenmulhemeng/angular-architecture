@@ -1,0 +1,11 @@
+<form [formGroup]="customerForm" (ngSubmit)="emitAdd()">
+    <label>
+        First name:
+        <input type="text"  formControlName="firstname" required>
+      </label>
+      <label>
+        Last name:
+        <input type="text"  formControlName="lastname">
+      </label>
+      <button type="submit" [disabled]="!customerForm.valid">Add</button>
+    </form>

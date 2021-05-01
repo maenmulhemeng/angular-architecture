@@ -1,0 +1,25 @@
+<form [formGroup]="customerForm" (ngSubmit)="emitUpdate()">
+    <label>
+        First name:
+        <input type="text"  formControlName="firstname" required>
+      </label>
+      <label>
+        Last name:
+        <input type="text"  formControlName="lastname">
+      </label>
+      <button mat-raised-button type="submit" [disabled]="!customerForm.valid">Update</button>
+    </form>
+<!--<form #customerForm="ngForm">
+  <div class="form-group">
+    <label for="firstname">First name</label>
+    <input type="text" class="form-control" id="firstname"
+            required
+            [(ngModel)]="customer.firstname" name="firstname"
+            #name="ngModel">
+    <label for="lastname">Last name</label>
+    <input type="text" class="form-control" id="lastname"
+            required
+            [(ngModel)]="customer.lastname" name="lastname"
+            #name="ngModel">
+  </div>
+</form>-->

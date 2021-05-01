@@ -1,0 +1,14 @@
+<h1>Banks Management</h1>
+
+<button mat-raised-button >
+    <a routerLink="/bank/add" routerLinkActive="active">Add Bank</a>
+</button>
+<h2>Abstract List</h2>
+<app-admin-abstract-list  
+[items]="getBanks()" 
+[fields]="['title','address']" 
+[editLink]="'/bank/edit'"
+(deleteItem)="onDelete($event)"></app-admin-abstract-list>
+
+<h2>Cusomized List</h2>
+<app-admin-bank-list [banks]="banks"></app-admin-bank-list>

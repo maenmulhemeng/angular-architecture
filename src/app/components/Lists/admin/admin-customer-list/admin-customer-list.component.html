@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let customer of getCustomers()">
+        {{customer.firstname}} {{customer.lastname}}  
+        <button>
+        <a routerLink="/customer/edit/{{customer.id}}"  routerLinkActive="active">Edit</a>  
+    </button>
+        <button  (click)="onDelete(customer.id)">Delete</button>  
+    </li>
+</ul>

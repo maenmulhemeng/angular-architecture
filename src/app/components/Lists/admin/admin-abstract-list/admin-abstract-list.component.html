@@ -1,0 +1,10 @@
+<mat-list role="list">
+    <h3 matSubheader>All banks</h3>
+    <mat-list-item role="listitem" *ngFor="let item of getItems()">
+            <span *ngFor="let field of getFields()">{{item[field]}} ,</span>
+            <button mat-raised-button>
+                <a routerLink="{{buildEditLink(item.id)}}"  routerLinkActive="active">Edit</a>  
+            </button>
+            <button mat-raised-button  *ngIf="hasDelete()" (click)="emitDeleteItem(item.id)">Delete</button>  
+    </mat-list-item>
+</mat-list>

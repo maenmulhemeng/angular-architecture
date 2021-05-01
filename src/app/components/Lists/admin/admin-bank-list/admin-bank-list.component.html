@@ -1,0 +1,10 @@
+
+<ul>
+    <li *ngFor="let bank of getBanks()">
+        {{bank.id}} {{bank.title}}  
+        <button>
+        <a routerLink="/bank/edit/{{bank.id}}"  routerLinkActive="active">Edit</a>  
+    </button>
+        <button  (click)="onDelete(bank.id)">Delete</button>  
+    </li>
+</ul>
